@@ -37,8 +37,8 @@ def total_orders_by_season(day_df):
     return day_df.groupby("season").count_cr.sum().reset_index()
 
 # Memuat data
-days_df = pd.read_csv("day_clean.csv")
-hours_df = pd.read_csv("hour_clean.csv")
+days_df = pd.read_csv("./day_clean.csv")
+hours_df = pd.read_csv("./hour_clean.csv")
 
 # Mengonversi kolom tanggal menjadi datetime
 for df in [days_df, hours_df]:
